@@ -19,7 +19,7 @@
             color: white;
             padding: 10px 20px; /* Reducem grosimea părții maro */
             display: flex;
-            align-items: center;
+            align-items: center; /* Align items vertically center */
             position: fixed; /* Fix the header at the top */
             width: 100%;
             top: 0;
@@ -33,52 +33,22 @@
         }
 
         nav {
-            flex: 1; /* Allow nav to take available space */
             display: flex;
-            justify-content: space-between; /* Space out menu items */
-            align-items: center;
+            margin-left: auto; /* Push nav to the right */
         }
 
-        nav .main-menu {
-            display: flex;
-            justify-content: center; /* Center main menu items */
-            flex-grow: 1;
-        }
-
-        nav .main-menu ul {
+        nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             display: flex;
         }
 
-        nav .main-menu ul li {
+        nav ul li {
             margin: 0 4px;
         }
 
-        nav .main-menu ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        nav .additional-menu {
-            display: flex;
-            align-items: center;
-        }
-
-        nav .additional-menu ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav .additional-menu ul li {
-            margin: 0 4px;
-        }
-
-        nav .additional-menu ul li a {
+        nav ul li a {
             color: white;
             text-decoration: none;
             font-size: 18px;
@@ -89,7 +59,7 @@
             text-align: center;
         }
 
-        /* Modificări pentru afișarea fiecărei categorii pe un rând */
+        /* Products grid */
         .products {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -131,126 +101,117 @@
     <header>
         <img src="logo.jpg" alt="Aquatic Heaven Logo">
         <nav>
-            <div class="main-menu">
-                <ul>
-                    <li><a href="#creveti">Creveți</a></li>
-                    <li><a href="#plante">Plante</a></li>
-                    <li><a href="#melci " >Melci</a></li>
-                    <div style="margin-left: auto; margin-right: -5px;"></div>
-                </ul>
-            </div>
-            <div class="additional-menu">
-                <div style="margin-left: auto; margin-right: 15px;"> <!-- Spațiu la stânga -->
-                    <ul>
-                        <li><a href="#sus">Acasă</a></li>
-                        <li><a href="#pickup">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+            <ul>
+                <li><a href="#creveti">Creveți</a></li>
+                <li><a href="#plante">Plante</a></li>
+                <li><a href="#melci">Melci</a></li>
+                <li><a href="#sus">Acasă</a></li>
+                <li><a href="#pickup">Contact</a></li>
+                <div style="margin-left: auto; margin-right: 20px;"></div>
+            </ul>
         </nav>
     </header>
-    
 
-<!-- Secțiunea Creveți -->
-<section class="section" id="creveti">
-    <h2>Creveți</h2>
-    <div class="products">
-        <div class="product-card">
-            <img src="black galaxy.jpg" alt="Black Galaxy Fishbone">
-            <h3>Black Galaxy Fishbone</h3>
-            <p>Preț: 15 lei/buc</p>
+    <!-- Secțiunea Creveți -->
+    <section class="section" id="creveti">
+        <h2>Creveți</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="black galaxy.jpg" alt="Black Galaxy Fishbone">
+                <h3>Black Galaxy Fishbone</h3>
+                <p>Preț: 15 lei/buc</p>
+            </div>
+            <div class="product-card">
+                <img src="blue bolt.jpg" alt="Blue Bolt">
+                <h3>Blue Bolt</h3>
+                <p>Preț: 20 lei/buc</p>
+            </div>
+            <div class="product-card">
+                <img src="sulawesi.jpg" alt="Sulawesi">
+                <h3>Sulawesi</h3>
+                <p>Preț: 18 lei/buc</p>
+            </div>
+            <div class="product-card">
+                <img src="red sakura.jpg" alt="Super Red Sakura">
+                <h3>Super Red Sakura</h3>
+                <p>Preț: 18 lei/buc</p>
+            </div>
+            <div class="product-card">
+                <img src="red bee.jpg" alt="Crystal Red Bee">
+                <h3>Crystal Red Bee</h3>
+                <p>Preț: 18 lei/buc</p>
+            </div>
         </div>
-        <div class="product-card">
-            <img src="blue bolt.jpg" alt="Blue Bolt">
-            <h3>Blue Bolt</h3>
-            <p>Preț: 20 lei/buc</p>
-        </div>
-        <div class="product-card">
-            <img src="sulawesi.jpg" alt="Sulawesi">
-            <h3>Sulawesi</h3>
-            <p>Preț: 18 lei/buc</p>
-        </div>
-        <div class="product-card">
-            <img src="red sakura.jpg" alt="Super Red Sakura">
-            <h3>Super Red Sakura</h3>
-            <p>Preț: 18 lei/buc</p>
-        </div>
-        <div class="product-card">
-            <img src="red bee.jpg" alt="Crystal Red Bee">
-            <h3>Crystal Red Bee</h3>
-            <p>Preț: 18 lei/buc</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Secțiunea Plante -->
-<section class="section" id="plante">
-    <h2>Plante</h2>
-    <div class="products">
-        <div class="product-card">
-            <img src="anubias nana.jpg" alt="Plantă acvatică 1">
-            <h3>Anubias Nana</h3>
-            <p>Preț: 10 lei/buc</p>
+    <!-- Secțiunea Plante -->
+    <section class="section" id="plante">
+        <h2>Plante</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="anubias nana.jpg" alt="Plantă acvatică 1">
+                <h3>Anubias Nana</h3>
+                <p>Preț: 10 lei/buc</p>
+            </div>
+            <div class="product-card">
+                <img src="vallisneria.jpg" alt="Plantă acvatică 2">
+                <h3>Vallisneria</h3>
+                <p>Preț: 12 lei/buc</p>
+            </div>
+            <div class="product-card">
+                <img src="moss.jpg" alt="Plantă acvatică 3">
+                <h3>Moss Ball</h3>
+                <p>Preț: 8 lei/buc</p>
+            </div>
+            <div class="product-card">
+                <img src="christmas moss.jpg" alt="Plantă acvatică 4">
+                <h3>Christmas Moss</h3>
+                <p>Preț: 8 lei/buc</p>
+            </div>
         </div>
-        <div class="product-card">
-            <img src="vallisneria.jpg" alt="Plantă acvatică 2">
-            <h3>Vallisneria</h3>
-            <p>Preț: 12 lei/buc</p>
-        </div>
-        <div class="product-card">
-            <img src="moss.jpg" alt="Plantă acvatică 3">
-            <h3>Moss Ball</h3>
-            <p>Preț: 8 lei/buc</p>
-        </div>
-        <div class="product-card">
-            <img src="christmas moss.jpg" alt="Plantă acvatică 4">
-            <h3>Christmas Moss</h3>
-            <p>Preț: 8 lei/buc</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Secțiunea Melci -->
-<section class="section" id="melci">
-    <h2>Melci</h2>
-    <div class="products">
-        <div class="product-card">
-            <img src="Tylomelania Yellow Spot.jpg" alt="Melc acvatic 1">
-            <h3>Tylomelania Yellow Spot</h3>
-            <p>Preț: 5 lei/buc</p>
+    <!-- Secțiunea Melci -->
+    <section class="section" id="melci">
+        <h2>Melci</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="Tylomelania Yellow Spot.jpg" alt="Melc acvatic 1">
+                <h3>Tylomelania Yellow Spot</h3>
+                <p>Preț: 5 lei/buc</p>
+            </div>
+            <div class="product-card">
+                <img src="Tylomelania Orange.jpg" alt="Melc acvatic 2">
+                <h3>Tylomelania Orange</h3>
+                <p>Preț: 6 lei/buc</p>
+            </div>
+            <div class="product-card">
+                <img src="asasin.jpg" alt="Melc acvatic 3">
+                <h3>Tylomelania Red</h3>
+                <p>Preț: 7 lei/buc</p>
+            </div>
         </div>
-        <div class="product-card">
-            <img src="Tylomelania Orange.jpg" alt="Melc acvatic 2">
-            <h3>Tylomelania Orange</h3>
-            <p>Preț: 6 lei/buc</p>
-        </div>
-        <div class="product-card">
-            <img src="asasin.jpg" alt="Melc acvatic 3"> <!-- Aici adaugă o nouă imagine -->
-            <h3>Tylomelania Red</h3>
-            <p>Preț: 7 lei/buc</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section class="section" id="pickup">
-    <h2>Punct de ridicare</h2>
-    <p>Adresa: Restaurant Nicoresti</p>
-    <p>Telefon: 0731321281</p>
-</section>
+    <section class="section" id="pickup">
+        <h2>Punct de ridicare</h2>
+        <p>Adresa: Restaurant Nicoresti</p>
+        <p>Telefon: 0731321281</p>
+    </section>
 
-<footer>
-    <p>Comenzile de peste 200 lei beneficiază de transport gratuit!</p>
-</footer>
+    <footer>
+        <p>Comenzile de peste 200 lei beneficiază de transport gratuit!</p>
+    </footer>
 
-<!-- Script pentru funcționalitate -->
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    <!-- Script pentru funcționalitate -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 </html>
